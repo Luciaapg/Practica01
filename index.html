@@ -5,25 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practica01</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/04b2462f47.js" crossorigin="anonymous"></script>
    
 </head>
 <body>
 
-    <header>
+    <!-- Bienvenida -->
+  <section class="welcome" id="welcome">
+    <div class="welcome-content">
+      <h1>Bienvenido a Genshin Impact</h1>
+      <p>Explora un mundo lleno de aventuras.</p>
+      <button onclick="goToMenu()">Comenzar viaje</button>
+    </div>
+  </section>
 
-    </header>
+    <!-- Apartado de Información -->
+    <section class="section informacion">
+        <h2>Información del Juego</h2>
+        <p>Descubre más sobre el mundo, los personajes y la historia de Genshin Impact.</p>
+      </section>    
+
+  <!-- Apartado de Noticias -->
+  <section class="section noticias">
+    <h2>Últimas Noticias</h2>
+    <p>Mantente al tanto de los nuevos eventos y actualizaciones.</p>
+  </section>
 
 
-
-
-
-
-
-    <footer>
-
-    </footer>
+  <script>
+    function goToMenu() {
+      alert('Aquí irás al menú de selección de personaje.');
+    }
+  </script>
 
 </body>
 
