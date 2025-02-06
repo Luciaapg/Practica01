@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes</title>
+    <link rel="stylesheet" href="css/personajes.css">
+    <script src="https://kit.fontawesome.com/04b2462f47.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Botón de Configuración -->
+    <button class="config-btn" onclick="openConfig()">
+        <i class="fas fa-cog"></i>
+    </button>
+
+    <!-- Contenedor del Personaje Principal -->
+    <div class="main-character">
+        <div class="character-info">
+            <h1 id="character-name">Venti</h1>
+            <p id="character-description">Venti es el dios de la libertad y el bardo errante de Mondstadt.</p>
+            <button id="select-btn" onclick="selectCharacter()">Seleccionar</button>
+        </div>
+        <div class="character-image">
+            <img id="main-character-image" src="./media/venti-large.webp" alt="Venti">
+        </div>
+    </div>
+
+    <!-- Galería de Personajes -->
+    <div class="character-gallery">
+        <img src="./media/venti icon.webp" alt="Venti" onclick="showCharacter('Venti', './media/venti.webp', 'Venti es el dios de la libertad y el bardo errante de Mondstadt.')">
+        <img src="./media/zhongli icon.webp" alt="Zhongli" onclick="showCharacter('Zhongli', './media/zhongli.webp', 'Zhongli es el dios de la tierra, conocido por su sabiduría y serenidad.')">
+        <img src="./media/raiden icon.webp" alt="Raiden" onclick="showCharacter('Raiden Shogun', './media/raiden.webp', 'Raiden Shogun, la Electro Archon, es la guardiana de Inazuma.')">
+        <img src="./media/nahida icon.webp" alt="Nahida" onclick="showCharacter('Nahida', './media/nahida.webp', 'Nahida es la Dendro Archon, llena de conocimiento y amabilidad.')">
+        <img src="./media/mavuika icon.webp" alt="Navuika" onclick="showCharacter('Mavuika', './media/mavuika.webp', 'Navuika es una guerrera ágil y misteriosa del desierto.')">
+    </div>
+
+    <script>
+        function showCharacter(name, imgSrc, description) {
+            document.getElementById("character-name").innerText = name;
+            document.getElementById("main-character-image").src = imgSrc;
+            document.getElementById("character-description").innerText = description;
+        }
+
+        function selectCharacter() {
+            location.href = "zonas.html";
+        }
+
+        function openConfig() {
+            alert("Aquí se abrirá el menú de configuración.");
+        }
+    </script>
+</body>
+
+</html>

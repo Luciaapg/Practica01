@@ -1,0 +1,130 @@
+/* General Reset */
+body, h1, p, button {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f0f0, #d9f0ff);
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Botón de Configuración */
+.config-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.config-btn:hover {
+    background: #4682b4;
+}
+
+/* Contenedor Principal */
+.main-character {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    width: 90%;
+}
+
+.character-info {
+    max-width: 50%;
+    text-align: left;
+}
+
+.character-info h1 {
+    font-size: 2rem;
+    color: #1e90ff;
+}
+
+.character-info p {
+    margin: 15px 0;
+    font-size: 1rem;
+}
+
+#select-btn {
+    background: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#select-btn:hover {
+    background: #4682b4;
+}
+
+.character-image img {
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+/* Galería de Personajes */
+.character-gallery {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.character-gallery img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s ease;
+}
+
+.character-gallery img:hover {
+    border: 2px solid #1e90ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-character {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .character-info {
+        max-width: 100%;
+    }
+
+    .character-image img {
+        max-width: 150px;
+    }
+
+    .character-gallery img {
+        width: 50px;
+        height: 50px;
+    }
+}
