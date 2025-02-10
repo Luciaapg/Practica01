@@ -63,7 +63,79 @@ body, h1, h2, p {
   .welcome-content button:hover {
     background-color: #4682b4;
   }
-  
+
+  .formilario{
+    display: flex;
+    max-width: 800px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+
+  .form-column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-text {
+    flex: 1;
+    padding: 20px;
+  }
+
+  form {
+    flex: 1;
+    padding: 20px;
+    background: #e9ecef;
+    border-radius: 10px;
+  }
+
+
+
+  form label {
+      display: block;
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+  }
+
+  form input, form textarea {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      background-color: #fff;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease;
+  }
+
+  form input:focus, form textarea:focus {
+      border-color: #333;
+      outline: none;
+  }
+
+  form button {
+      display: block;
+      width: 100%; 
+      padding: 0.8rem;
+      font-size: 1.2rem;
+      color: white;
+      background-color: #333;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
+
+  form button:hover {
+      background-color: #bc45cc;
+  }
+
+
+
+
   /* Section Styles */
   .section {
     padding: 2rem;
@@ -88,7 +160,7 @@ body, h1, h2, p {
   .section p {
     font-size: 1.1rem;
   }
-  
+
   /* Responsive Design */
   @media (max-width: 768px) {
     .welcome-content h1 {
