@@ -54,15 +54,18 @@ body, h1, h2, p {
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     color: white;
-    background-color: #1e90ff;
+    background-color: #6e4229;
     border: none;
     border-radius: 5px;
     cursor: pointer;
   }
   
   .welcome-content button:hover {
-    background-color: #4682b4;
+    background-color: #1e3358;
   }
+
+
+/* FORMULARIO*/  
 
   .formilario{
     display: flex;
@@ -88,6 +91,7 @@ body, h1, h2, p {
     padding: 20px;
     background: #e9ecef;
     border-radius: 10px;
+    text-align: left;
   }
 
 
@@ -109,6 +113,7 @@ body, h1, h2, p {
       background-color: #fff;
       box-sizing: border-box;
       transition: border-color 0.3s ease;
+      text-align: left;
   }
 
   form input:focus, form textarea:focus {
@@ -134,8 +139,7 @@ body, h1, h2, p {
   }
 
 
-
-
+  
   /* Section Styles */
   .section {
     padding: 2rem;
@@ -143,12 +147,12 @@ body, h1, h2, p {
   }
   
   .noticias {
-    background-color: #f0f8ff;
+    background-color: #ffeedf;
     color: #000;
   }
   
   .informacion {
-    background-color: #fff;
+    background-color: rgb(255, 252, 250);
     color: #333;
   }
   
@@ -161,7 +165,186 @@ body, h1, h2, p {
     font-size: 1.1rem;
   }
 
-  /* Responsive Design */
+
+
+/* Contenedor de la sección */
+.informacion-container {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  padding: 40px 50px;
+}
+
+/* Título */
+.informacion-descripcion h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #75451e; 
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+/* Texto descriptivo */
+.informacion-descripcion p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  margin-right: 2rem;
+  color: #333;
+  text-align: justify;
+}
+
+/* Carrusel */
+.informacion-carrusel {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carrusel {
+  position: relative;
+  width: 600px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carrusel .slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.carrusel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.carrusel .slide.active {
+  display: block;
+}
+
+/* Botones del carrusel */
+.carrusel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.carrusel button:hover {
+  background: #3498db;
+}
+
+.carrusel .prev-btn {
+  left: 10px;
+}
+
+.carrusel .next-btn {
+  right: 10px;
+}
+
+
+
+
+
+/* Estilo de Noticias */
+.noticias-container {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(50, 25, 25, 0.9); /* Fondo semi-transparente */
+  padding: 30px; /* Márgenes más grandes */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  align-items: center; /* Centra verticalmente los elementos */
+}
+
+.noticias-imagen {
+  flex: 1; /* Ocupa el mismo espacio que el texto */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.noticias-imagen img {
+  width: 100%; /* Ajusta el tamaño al contenedor */
+  max-width: 550px; /* Máximo tamaño de la imagen */
+  border-radius: 10px;
+}
+
+.noticias-lista {
+  color: white;
+  flex: 2; /* Da más espacio al texto */
+}
+
+.noticias-lista h2 {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #f2c94c; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+.noticias-lista ul {
+  list-style: none;
+  padding: 0;
+}
+
+.noticias-lista ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 0; 
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.noticias-lista ul li a {
+  color: white;
+  text-decoration: none;
+  flex: 1;
+  text-align: left;
+}
+
+.noticias-lista ul li a:hover {
+  color: #f2c94c; /* Efecto hover en dorado */
+}
+
+.noticias-lista ul li span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  white-space: nowrap;
+}
+
+.noticias-mas {
+  margin-top: 15px;
+  padding: 15px 30px;
+  color: white;
+  background-color: #316080; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.noticias-mas:hover {
+  background-color: #9a36a5;
+}
+
+
+
+
+/* Responsive Design */
   @media (max-width: 768px) {
     .welcome-content h1 {
       font-size: 2rem;

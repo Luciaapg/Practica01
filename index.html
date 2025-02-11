@@ -20,17 +20,78 @@
     </div>
   </section>
 
-    <!-- Apartado de Información -->
-    <section class="section informacion">
-        <h2>Información del Juego</h2>
-        <p>Descubre más sobre el mundo, los personajes y la historia de Genshin Impact.</p>
-      </section>    
+  <!-- Sección de Información -->
+  <section class="section informacion">
+    <div class="informacion-container">
+      <!-- Descripción del Juego -->
+      <div class="informacion-descripcion">
+        <h2>Explora un mundo de fantasía sin límites</h2>
+        <p>
+          Adéntrate en un vasto mundo lleno de maravillas y misterios en <strong>Genshin Impact</strong>, un juego de rol y aventuras que te llevará a través de regiones deslumbrantes, cada una con su propia historia, cultura y secretos. 
+          Invoca poderosos personajes con habilidades únicas, forja alianzas y descubre el destino que te espera como Viajero. 
+          ¿Estás listo para enfrentarte a dragones legendarios, desentrañar los secretos de los Arcontes y convertirte en el héroe que salvará a Teyvat?
+        </p>
+        <p>
+          ¡El destino de este mágico mundo está en tus manos! Reúne tu equipo, perfecciona tus habilidades y deja tu huella en un universo donde cada decisión cuenta.
+        </p>
+      </div>
+  
+      <!-- Carrusel de Imágenes -->
+      <div class="informacion-carrusel">
+        <div class="carrusel">
+          <div class="slide active">
+            <img src="./media/Img Genshin1.webp">
+          </div>
+          <div class="slide">
+            <img src="./media/Img Genshin2.webp">
+          </div>
+          <div class="slide">
+            <img src="./media/Img Genshin3.jpg">
+          </div>
+          <button class="prev-btn">❮</button>
+          <button class="next-btn">❯</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
 
   <!-- Apartado de Noticias -->
   <section class="section noticias">
-    <h2>Últimas Noticias</h2>
-    <p>Mantente al tanto de los nuevos eventos y actualizaciones.</p>
+    <div class="noticias-container">
+      <div class="noticias-imagen">
+        <img src="./media/Noticias portada.webp" alt="Portada de noticias">
+      </div>
+      <div class="noticias-lista">
+        <h2>Más Reciente</h2>
+        <ul>
+          <li>
+            <a href="#">Una persona puede cambiar, pero la calidez de su mano es constante...</a>
+            <span>11/02/2025</span>
+          </li>
+          <li>
+            <a href="#">Presentación de personaje de Genshin Impact - Yumemizuki Mizuki</a>
+            <span>11/02/2025</span>
+          </li>
+          <li>
+            <a href="#">¡Prepárense para el Festival Floral Mikawa!</a>
+            <span>10/02/2025</span>
+          </li>
+          <li>
+            <a href="#">Eventos de la versión 5.4 «Una luna de ensueño» (I)</a>
+            <span>10/02/2025</span>
+          </li>
+          <li>
+            <a href="#">Anuncio de los gachapones promocionales de la versión 5.4 (I)</a>
+            <span>10/02/2025</span>
+          </li>
+        </ul>
+        <button class="noticias-mas">Más</button>
+      </div>
+    </div>
   </section>
+
 
     <!-- Apartado de Formulario -->
   <section class="section formulario">
@@ -57,6 +118,7 @@
     }
   </script>
 
+  <script src="js/slides.js"></script>
 </body>
 
 </html>
