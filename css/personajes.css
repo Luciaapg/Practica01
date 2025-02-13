@@ -1,4 +1,4 @@
-/* General Reset */
+
 body, h1, p, button {
     margin: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
 /* Fondo estático de la página */
 body {
     background: url('../media/Arcontes.webp') center center / cover no-repeat; /* Imagen de fondo estática */
-    color: #ffffff; /* Texto marrón oscuro */
+    color: #ffffff; 
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@ body::before {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #7a4f37; /* Marrón oscuro */
+    background: #7a4f37; 
     color: white;
     border: none;
     border-radius: 50%;
@@ -66,7 +66,7 @@ body::before {
 }
 
 .config-btn:hover {
-    background: #5d3c2b; /* Marrón más oscuro */
+    background: #5d3c2b; 
 }
 
 /* Contenedor Principal */
@@ -84,7 +84,7 @@ body::before {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #e7d4c0; /* Fondo crema */
+    background: #e7d4c0; 
     border-radius: 20px;
     padding: 30px; /* Espaciado interno */
     box-shadow: 0 4px 10px rgba(72, 44, 25, 0.47);
@@ -110,17 +110,17 @@ body::before {
 
 .character-info h1 {
     font-size: 2.5rem;
-    color: #7a4f37; /* Marrón oscuro */
+    color: #7a4f37; 
 }
 
 .character-info p {
     margin: 15px 0;
     font-size: 1rem;
-    color: #4a2c2a; /* Marrón oscuro */
+    color: #4a2c2a; 
 }
 
 #select-btn {
-    background: #7a4f37; /* Marrón oscuro */
+    background: #7a4f37; 
     color: white;
     padding: 10px 20px;
     border: none;
@@ -131,7 +131,7 @@ body::before {
 }
 
 #select-btn:hover {
-    background: #5d3c2b; /* Marrón más oscuro */
+    background: #5d3c2b; 
 }
 
 /* Galería de Personajes */
@@ -139,7 +139,7 @@ body::before {
     display: flex;
     gap: 10px;
     margin-top: 20px;
-    background: rgba(122, 79, 55, 0.8); /* Marrón translúcido */
+    background: rgba(122, 79, 55, 0.8); 
     padding: 10px;
     border-radius: 10px;
 }
@@ -155,6 +155,6 @@ body::before {
 }
 
 .character-gallery img:hover {
-    border: 2px solid #7a4f37; /* Marrón oscuro */
+    border: 2px solid #7a4f37; 
     transform: scale(1.1);
 }
