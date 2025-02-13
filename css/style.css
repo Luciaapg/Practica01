@@ -341,30 +341,104 @@ body, h1, h2, p {
   background-color: #9a36a5;
 }
 
+/* Estilos para el footer */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.footer-links {
+  margin-top: 10px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
 
 
 
-/* Responsive Design */
-  @media (max-width: 768px) {
+
+@media (max-width: 900px) {
     .welcome-content h1 {
-      font-size: 2rem;
+        font-size: 2.5rem;
     }
-  
+
     .welcome-content p {
-      font-size: 1rem;
+        font-size: 1.2rem;
     }
-  
-    .welcome-content button {
-      font-size: 0.9rem;
-      padding: 0.6rem 1rem;
+
+    .informacion-container {
+        flex-direction: column;
+        padding: 20px;
     }
-  
-    .section h2 {
-      font-size: 1.5rem;
+
+    .informacion-carrusel {
+        width: 100%;
     }
-  
-    .section p {
-      font-size: 1rem;
+
+    .noticias-container {
+        flex-direction: column;
     }
-  }
-  
+
+    .noticias-imagen img {
+        max-width: 100%;
+    }
+
+    .noticias-lista {
+        padding: 20px;
+    }
+
+    .form-column {
+        padding: 10px;
+    }
+}
+
+/* Para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+    .welcome-content h1 {
+        font-size: 2rem;
+    }
+
+    .welcome-content p {
+        font-size: 1rem;
+    }
+
+    .informacion-descripcion h2 {
+        font-size: 2rem;
+    }
+
+    .informacion-descripcion p {
+        font-size: 1rem;
+    }
+
+    form input, form textarea {
+        font-size: 0.9rem;
+    }
+
+    .footer-content {
+        padding: 10px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+}
