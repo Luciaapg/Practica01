@@ -6,32 +6,44 @@ body, h1, p, button {
 }
 
 body {
-    background: linear-gradient(135deg, #f0f0f0, #d9f0ff);
-    color: #333;
+    background: #f8f1e5; /* Fondo beige claro */
+    color: #4a2c2a; /* Texto marrón oscuro */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;  
+}
+
+/* Fondo estático de la página */
+body {
+    background: url('../media/Arcontes.webp') center center / cover no-repeat; /* Imagen de fondo estática */
+    color: #ffffff; /* Texto marrón oscuro */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    flex-direction: column;
+    position: relative; /* Para manejar la capa oscura */
 }
 
-header {
-    margin-bottom: 5rem;
+/* Capa oscura sobre el fondo */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Capa oscura con transparencia */
+    z-index: -1; /* Mantener la capa detrás del contenido */
 }
 
-h1 {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-p {
-    font-size: 18px;
-    color: #666;
-    text-align: center;
+/* Asegurar que el contenedor principal quede encima del fondo */
+.main-container {
+    z-index: 1; /* Mantenerlo por encima de la capa oscura */
 }
 
 /* Botón de Configuración */
@@ -39,7 +51,7 @@ p {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #1e90ff;
+    background: #7a4f37; /* Marrón oscuro */
     color: white;
     border: none;
     border-radius: 50%;
@@ -54,55 +66,72 @@ p {
 }
 
 .config-btn:hover {
-    background: #4682b4;
+    background: #5d3c2b; /* Marrón más oscuro */
 }
 
 /* Contenedor Principal */
-.main-character {
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1000px;
+}
+
+/* Display del Personaje */
+.character-display {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    background: rgba(255, 255, 255, 0.9);
+    justify-content: space-between;
+    background: #e7d4c0; /* Fondo crema */
     border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    width: 90%;
+    padding: 30px; /* Espaciado interno */
+    box-shadow: 0 4px 10px rgba(72, 44, 25, 0.47);
+    width: 100%;
+    max-width: 900px;
+    gap: 20px; /* Espacio entre la imagen y el texto */
+    position: relative; /* No afecta el diseño externo */
+}
+
+.character-display img {
+    max-width: 250px; /* Tamaño máximo para asegurar que no ocupe demasiado */
+    max-height: 300px; /* Limita la altura */
+    border-radius: 10px;
+    object-fit: contain; /* Asegura que la imagen mantenga sus proporciones */
+    flex-shrink: 0; /* Evita que la imagen se reduzca si no hay espacio suficiente */
 }
 
 .character-info {
-    max-width: 50%;
-    text-align: left;
+    max-width: 60%; /* Ajusta el ancho del texto */
+    padding-left: 20px; /* Espaciado adicional para separar texto e imagen */
 }
 
+
 .character-info h1 {
-    font-size: 2rem;
-    color: #1e90ff;
+    font-size: 2.5rem;
+    color: #7a4f37; /* Marrón oscuro */
 }
 
 .character-info p {
     margin: 15px 0;
     font-size: 1rem;
+    color: #4a2c2a; /* Marrón oscuro */
 }
 
 #select-btn {
-    background: #1e90ff;
+    background: #7a4f37; /* Marrón oscuro */
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
     cursor: pointer;
+    margin-top: 10px;
 }
 
 #select-btn:hover {
-    background: #4682b4;
-}
-
-.character-image img {
-    max-width: 200px;
-    border-radius: 10px;
+    background: #5d3c2b; /* Marrón más oscuro */
 }
 
 /* Galería de Personajes */
@@ -110,39 +139,22 @@ p {
     display: flex;
     gap: 10px;
     margin-top: 20px;
+    background: rgba(122, 79, 55, 0.8); /* Marrón translúcido */
+    padding: 10px;
+    border-radius: 10px;
 }
 
 .character-gallery img {
     width: 60px;
     height: 60px;
     object-fit: cover;
-    border-radius: 50%;
+    border-radius: 10px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: border 0.3s ease;
+    transition: border 0.3s ease, transform 0.2s ease;
 }
 
 .character-gallery img:hover {
-    border: 2px solid #1e90ff;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .main-character {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .character-info {
-        max-width: 100%;
-    }
-
-    .character-image img {
-        max-width: 150px;
-    }
-
-    .character-gallery img {
-        width: 50px;
-        height: 50px;
-    }
+    border: 2px solid #7a4f37; /* Marrón oscuro */
+    transform: scale(1.1);
 }

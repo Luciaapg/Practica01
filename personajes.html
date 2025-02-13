@@ -10,9 +10,10 @@
 </head>
 
 <body>
+    <div class="background-overlay"></div> <!-- Capa oscura encima del fondo -->
+
     <header>
         <h1>PERSONAJES</h1>
-        <P>¡Elige un personaje!</P>
     </header>
 
     <!-- Botón de Configuración -->
@@ -20,15 +21,15 @@
         <i class="fas fa-cog"></i>
     </button>
 
-    <!-- Contenedor del Personaje Principal -->
-    <div class="main-character">
-        <div class="character-info">
-            <h1 id="character-name">Venti</h1>
-            <p id="character-description">Venti es el dios de la libertad y el bardo errante de Mondstadt.</p>
-            <button id="select-btn" onclick="selectCharacter()">Seleccionar</button>
-        </div>
-        <div class="character-image">
+    <!-- Contenedor Principal -->
+    <div class="main-container">
+        <div class="character-display">
             <img id="main-character-image" src="./media/venti-large.webp" alt="Venti">
+            <div class="character-info">
+                <h1 id="character-name">Venti</h1>
+                <p id="character-description">Venti es el dios de la libertad y el bardo errante de Mondstadt.</p>
+                <button id="select-btn" onclick="selectCharacter()">Seleccionar</button>
+            </div>
         </div>
     </div>
 
@@ -53,7 +54,6 @@
         }
 
         function openConfig() {
-            alert("Aquí se abrirá el menú de configuración.");
             location.href = "configuracion.html";
         }
     </script>
