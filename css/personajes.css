@@ -14,6 +14,24 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 5rem;
+}
+
+h1 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
 }
 
 /* Botón de Configuración */

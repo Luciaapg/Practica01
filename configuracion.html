@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración</title>
+    <link rel="stylesheet" href="css/configuracionHUD">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Configuración del Juego</h1>
+            <p>Modifica la resolución de pantalla, calidad gráfica y volumen.</p>
+        </header>
+
+        <div class="config-options">
+            <div class="option">
+                <label for="resolution">Resolución de pantalla:</label>
+                <select id="resolution" onchange="updateResolution()">
+                    <option value="1920x1080">1920x1080 (Full HD)</option>
+                    <option value="1280x720">1280x720 (HD)</option>
+                    <option value="3840x2160">3840x2160 (4K)</option>
+                </select>
+                <span id="resolution-value">1920x1080</span>
+            </div>
+
+            <div class="option">
+                <label for="graphics">Calidad gráfica:</label>
+                <select id="graphics" onchange="updateGraphics()">
+                    <option value="alta">Alta</option>
+                    <option value="media">Media</option>
+                    <option value="baja">Baja</option>
+                </select>
+                <span id="graphics-value">Alta</span>
+            </div>
+
+            <div class="option">
+                <label for="volume">Volumen:</label>
+                <input type="range" id="volume" min="0" max="100" value="50" onchange="updateVolume()">
+                <span id="volume-value">50%</span>
+            </div>
+        </div>
+
+        <button onclick="saveSettings()">Guardar Configuración</button>
+    </div>
+
+    <script src="js/configuracion.js"></script>
+</body>
+</html>

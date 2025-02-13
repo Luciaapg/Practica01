@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica01</title>
+    <title>Mapas</title>
     <link rel="stylesheet" href="css/zonas.css">
     <script src="https://kit.fontawesome.com/04b2462f47.js" crossorigin="anonymous"></script>
    
@@ -12,9 +12,14 @@
 
 <body>
     <header>
-        <h1>MAPA</h1>
+        <h1>MAPAS</h1>
         <P>¡Elige un mapa!</P>
     </header>
+
+    <!-- Botón de Configuración -->
+    <button class="config-btn" onclick="openConfig()">
+        <i class="fas fa-cog"></i>
+    </button>
     
     <div class="gallery">
         <div class="image-container">
@@ -42,5 +47,12 @@
             </a>
         </div>
     </div>
+
+    <script>
+        function openConfig() {
+            alert("Aquí se abrirá el menú de configuración.");
+            location.href = "configuracion.html";
+        }
+    </script>
 </body>
 </html>

@@ -22,13 +22,39 @@ h1 {
     font-size: 36px;
     color: #333;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 p {
     font-size: 18px;
     color: #666;
+    text-align: center;
 }
 
+/* Botón de Configuración */
+.config-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.config-btn:hover {
+    background: #4682b4;
+}
+
+/* selccion de mapas */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
