@@ -6,12 +6,28 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f3e6de; /* Color de fondo base */
+    background: url('../media/zonas.webp') center center / cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+}
+
+/* Capa oscura */
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Capa oscura */
+    z-index: -1;
 }
 
 header {
@@ -20,14 +36,14 @@ header {
 
 h1 {
     font-size: 36px;
-    color: #333;
+    color: #ffffff; /* Tono marrón oscuro */
     margin-bottom: 1rem;
     text-align: center;
 }
 
 p {
     font-size: 18px;
-    color: #666;
+    color: #5c4734; /* Tono marrón claro */
     text-align: center;
 }
 
@@ -36,7 +52,7 @@ p {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: #1e90ff;
+    background: #4b3621; /* Marrón oscuro */
     color: white;
     border: none;
     border-radius: 50%;
@@ -51,10 +67,10 @@ p {
 }
 
 .config-btn:hover {
-    background: #4682b4;
+    background: #704f36; /* Marrón más claro */
 }
 
-/* selccion de mapas */
+/* Selección de mapas */
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
