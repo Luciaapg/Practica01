@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.settings {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+select {
+    width: 100%;
+    max-width: 300px;
+}
+
+.hud {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    background-color: #333;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hud-element {
+    position: absolute;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+
+#life-bar {
+    background-color: red;
+    height: 30px;
+    width: 150px;
+}
+
+.life-bar-inner {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+}
+
+#mini-map {
+    width: 120px;
+    height: 120px;
+    background-color: #000;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 120px;
+}
+
+#attack-buttons {
+    display: flex;
+    gap: 1rem;
+    position: absolute;
+    bottom: 10%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    justify-content: center; 
+    flex-wrap: nowrap; 
+    width: 40%; 
+    height: 4rem; 
+    align-items: center; 
+}
+
+#attack-buttons button {
+    padding: 0.5rem;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    width: 4rem;
+}
+
+#attack-buttons button:hover {
+    background-color: darkblue;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración HUD</title>
+    <link rel="stylesheet" href="css/configuracionHUD.css">
+    <script src="https://kit.fontawesome.com/04b2462f47.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Configuración HUD</h1>
+        
+        <div class="settings">
+            <h2>Personaliza tu HUD</h2>
+            
+            <label for="life-bar-position">Posición de la Barra de Vida:</label>
+            <select id="life-bar-position">
+                <option value="top-left">Arriba-Izquierda</option>
+                <option value="top-right">Arriba-Derecha</option>
+                <option value="bottom-left">Abajo-Izquierda</option>
+                <option value="bottom-right">Abajo-Derecha</option>
+                <option value="top-center">Arriba-Centro</option>
+                <option value="bottom-center">Abajo-Centro</option>
+            </select>
+            
+            <label for="map-position">Posición del Mini Mapa:</label>
+            <select id="map-position">
+                <option value="top-left">Arriba-Izquierda</option>
+                <option value="top-right">Arriba-Derecha</option>
+                <option value="bottom-left">Abajo-Izquierda</option>
+                <option value="bottom-right">Abajo-Derecha</option>
+                <option value="top-center">Arriba-Centro</option>
+                <option value="bottom-center">Abajo-Centro</option>
+            </select>
+            
+            <label for="attack-buttons-position">Posición de los Botones de Ataque:</label>
+            <select id="attack-buttons-position">
+                <option value="top-left">Arriba-Izquierda</option>
+                <option value="top-right">Arriba-Derecha</option>
+                <option value="bottom-left">Abajo-Izquierda</option>
+                <option value="bottom-right">Abajo-Derecha</option>
+                <option value="top-center">Arriba-Centro</option>
+                <option value="bottom-center">Abajo-Centro</option>
+            </select>
+        </div>
+        
+        <div class="hud">
+            <div id="life-bar" class="hud-element">
+                <div class="life-bar-inner"></div>
+                <span>Vida: 100%</span>
+            </div>
+            <div id="mini-map" class="hud-element">
+                <span>Mini Mapa</span>
+            </div>
+            <div id="attack-buttons" class="hud-element">
+                <button>Ataque 1</button>
+                <button>Ataque 2</button>
+                <button>Ataque 3</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/configuracionHUD.js"></script>
+</body>
+</html>
