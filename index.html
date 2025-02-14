@@ -93,34 +93,36 @@
   </section>
 
 
+
     <!-- Apartado de Formulario -->
-  <section class="section formulario">
-    <h2>Formulario</h2>
-    <section class="form-column">
-      <p class="form-text">¡Inscríbete y consigue información sobre la beta antes que nadie! ¡No te pierdas las últimas novedades!</p>
-      <form>
-          <label for="name">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required>
-      
-          <label for="email">Correo Electrónico:</label>
-          <input type="email" id="email" name="email" required>
-      
-          <button type="send">Enviar</button>
-      </form>
+    <section class="section formulario">
+      <h2>Formulario</h2>
+      <section class="form-column">
+        <p class="form-text">¡Inscríbete y consigue información sobre la beta antes que nadie! ¡No te pierdas las últimas novedades!</p>
+        <form id="formulario" action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+        
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
   </section>
 
-</section>
 
-<footer class="footer">
-  <div class="footer-content">
-      <p>&copy; 2025 Sheila Medina y Lucía Pelado. Todos los derechos reservados.</p>
-      <div class="footer-links">
-          <a href="#welcome">Política de privacidad</a>
-          <a href="#welcome">Términos de servicio</a>
-          <a href="#welcome">Contacto</a>
-      </div>
-  </div>
-</footer>
+ <!-- Apartado de footer -->
+  <footer class="footer">
+    <div class="footer-content">
+        <p>&copy; 2025 Sheila Medina y Lucía Pelado. Todos los derechos reservados.</p>
+        <div class="footer-links">
+            <a href="#welcome">Política de privacidad</a>
+            <a href="#welcome">Términos de servicio</a>
+            <a href="#welcome">Contacto</a>
+        </div>
+    </div>
+  </footer>
 
 
   <script>
@@ -131,6 +133,7 @@
 
   <script src="js/slides.js"></script>
   <script src="js/sonidos.js"></script>
+  <script src="js/formulario.js"></script>
 </body>
 
 </html>
