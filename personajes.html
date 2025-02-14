@@ -24,10 +24,16 @@
     <!-- Contenedor Principal -->
     <div class="main-container">
         <div class="character-display">
-            <img id="main-character-image" src="./media/venti-large.webp" alt="Venti">
+            <img id="main-character-image" src="./media/venti.webp" alt="Venti">
             <div class="character-info">
                 <h1 id="character-name">Venti</h1>
-                <p id="character-description">Venti es el dios de la libertad y el bardo errante de Mondstadt.</p>
+                <p id="character-description">
+                    Venti es el dios de la libertad y el bardo errante de Mondstadt.<br>
+                    <strong>Estadísticas:</strong><br>
+                    <strong>Vida:</strong> 10535<br>
+                    <strong>Ataque:</strong> 263<br>
+                    <strong>Defensa:</strong> 669
+                </p>
                 <button id="select-btn" onclick="selectCharacter()">Seleccionar</button>
             </div>
         </div>
@@ -35,18 +41,24 @@
 
     <!-- Galería de Personajes -->
     <div class="character-gallery">
-        <img src="./media/venti icon.webp" alt="Venti" onclick="showCharacter('Venti', './media/venti.webp', 'Venti es el dios de la libertad y el bardo errante de Mondstadt.')">
-        <img src="./media/zhongli icon.webp" alt="Zhongli" onclick="showCharacter('Zhongli', './media/zhongli.webp', 'Zhongli es el dios de la tierra, conocido por su sabiduría y serenidad.')">
-        <img src="./media/raiden icon.webp" alt="Raiden" onclick="showCharacter('Raiden Shogun', './media/raiden.webp', 'Raiden Shogun, la Electro Archon, es la guardiana de Inazuma.')">
-        <img src="./media/nahida icon.webp" alt="Nahida" onclick="showCharacter('Nahida', './media/nahida.webp', 'Nahida es la Dendro Archon, llena de conocimiento y amabilidad.')">
-        <img src="./media/mavuika icon.webp" alt="Navuika" onclick="showCharacter('Mavuika', './media/mavuika.webp', 'Navuika es una guerrera ágil y misteriosa del desierto.')">
+        <img src="./media/venti icon.webp" alt="Venti" onclick="showCharacter('Venti', './media/venti.webp', 'Venti es el dios de la libertad y el bardo errante de Mondstadt.', 10535, 263, 669)">
+        <img src="./media/zhongli icon.webp" alt="Zhongli" onclick="showCharacter('Zhongli', './media/zhongli.webp', 'Zhongli es el dios de la tierra, conocido por su sabiduría y serenidad.', 14695, 251, 876)">
+        <img src="./media/raiden icon.webp" alt="Raiden" onclick="showCharacter('Raiden Shogun', './media/raiden.webp', 'Raiden Shogun, la Electro Archon, es la guardiana de Inazuma.', 12907, 337, 789)">
+        <img src="./media/nahida icon.webp" alt="Nahida" onclick="showCharacter('Nahida', './media/nahida.webp', 'Nahida es la Dendro Archon, llena de conocimiento y amabilidad.', 10360, 299, 630)">
+        <img src="./media/mavuika icon.webp" alt="Mavuika" onclick="showCharacter('Mavuika', './media/mavuika.webp', 'Mavuika es una guerrera ágil y misteriosa del desierto.', 12552, 359, 792)">
     </div>
 
     <script>
-        function showCharacter(name, imgSrc, description) {
+        function showCharacter(name, imgSrc, description, life, attack, defense) {
             document.getElementById("character-name").innerText = name;
             document.getElementById("main-character-image").src = imgSrc;
-            document.getElementById("character-description").innerText = description;
+            document.getElementById("character-description").innerHTML = `
+                ${description}<br>
+                <strong>Estadísticas:</strong><br>
+                <strong>Vida:</strong> ${life}<br>
+                <strong>Ataque:</strong> ${attack}<br>
+                <strong>Defensa:</strong> ${defense}<br>
+            `;
         }
 
         function selectCharacter() {
